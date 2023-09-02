@@ -1,0 +1,38 @@
+[
+  {
+    "petName": "John",
+    "petColor": "golden brown",
+    "petOwner": "Bill",
+    "lgt": "23.9234",
+    "ltd": "42.3456",
+    "petBreed": "German Shepard",
+    "petDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum est quasi non, quo optio corrupti animi hic dolorem voluptates repellendus nulla cupiditate delectus eum cum mollitia distinctio reprehenderit modi quidem."
+  },
+  {
+    "petName": "Archi",
+    "petColor": "black and white",
+    "petOwner": "Igor",
+    "lgt": "22.9234",
+    "ltd": "41.3456",
+    "petBreed": "Terrier",
+    "petDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum est quasi non, quo optio corrupti animi hic dolorem voluptates repellendus nulla cupiditate delectus eum cum mollitia distinctio reprehenderit modi quidem."
+  },
+  {
+    "petName": "Major",
+    "petColor": "white",
+    "petOwner": "Phil",
+    "lgt": "24.9234",
+    "ltd": "40.3456",
+    "petBreed": "German Shepard",
+    "petDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum est quasi non, quo optio corrupti animi hic dolorem voluptates repellendus nulla cupiditate delectus eum cum mollitia distinctio reprehenderit modi quidem."
+  },
+  {
+    "petName": "Kevin",
+    "petColor": "black",
+    "petOwner": "Kyle",
+    "lgt": "20.9234",
+    "ltd": "39.3456",
+    "petBreed": "German Shepard",
+    "petDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum est quasi non, quo optio corrupti animi hic dolorem voluptates repellendus nulla cupiditate delectus eum cum mollitia distinctio reprehenderit modi quidem."
+  }
+]
