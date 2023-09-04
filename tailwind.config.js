@@ -22,6 +22,9 @@ module.exports = {
         'front-page-img': "url('/images/front_page_news_bg.jpg')",
         'mobile-page-img': "url('/images/mobile_front_page_news_bg.jpg')",
       },
+      width: {
+        'pet-cards': '300px',
+      },
     },
   },
   plugins: [],
