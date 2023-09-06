@@ -2,6 +2,7 @@
   {
     "id": 31,
     "petName": "John",
+    "petPictures": ["/images/article_card_carousel/article_card_img_01.jpg"],
     "petColor": "golden brown",
     "petOwner": "Bill",
     "lgt": "23.9234",
@@ -12,6 +13,7 @@
   {
     "id": 32,
     "petName": "Archi",
+    "petPictures": ["/images/article_card_carousel/article_card_img_02.jpg"],
     "petColor": "black and white",
     "petOwner": "Igor",
     "lgt": "22.9234",
@@ -22,6 +24,7 @@
   {
     "id": 33,
     "petName": "Major",
+    "petPictures": ["/images/article_card_carousel/article_card_img_01.jpg"],
     "petColor": "white",
     "petOwner": "Phil",
     "lgt": "24.9234",
@@ -32,6 +35,7 @@
   {
     "id": 34,
     "petName": "Kevin",
+    "petPictures": ["/images/article_card_carousel/article_card_img_01.jpg"],
     "petColor": "black",
     "petOwner": "Kyle",
     "lgt": "20.9234",
@@ -42,6 +46,7 @@
   {
     "id": 35,
     "petName": "Kevin",
+    "petPictures": ["/images/article_card_carousel/article_card_img_01.jpg"],
     "petColor": "black",
     "petOwner": "Kyle",
     "lgt": "20.9234",
@@ -52,6 +57,7 @@
   {
     "id": 36,
     "petName": "Kevin",
+    "petPictures": ["/images/article_card_carousel/article_card_img_01.jpg"],
     "petColor": "black",
     "petOwner": "Kyle",
     "lgt": "20.9234",
