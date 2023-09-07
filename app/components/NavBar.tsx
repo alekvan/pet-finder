@@ -1,10 +1,10 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import DropdownMenu from './DropdownMenu';
-import { useWindowSize } from '../hooks/useWindowSize';
+import { useWindowSize } from '@uidotdev/usehooks';
 
 const NavBar = () => {
-  const width = useWindowSize().width;
+  const windowSize = useWindowSize();
 
   return (
     <nav className='flex lg:w-full sm:w-full justify-between px-4 lg:px-8 md:px-8 h-16 place-items-center text-blue-dark bg-orange-light text-lg'>
@@ -14,14 +14,14 @@ const NavBar = () => {
         <a href='/signup'>Регистрација</a>
       </div>
       <div className='flex justify-between float-right md:w-62 lg:w-60 sm:w-60'>
-        {width > 639 && (
+        {windowSize.width && windowSize.width > 639 && (
           <div className='flex w-48 justify-between'>
             <a href='/cats'>Cats</a>
             <a href='/dogs'>Dogs</a>
             <a href='/other'>Other Pets</a>
           </div>
         )}
-        <DropdownMenu />
+        {windowSize.width && <DropdownMenu />}
       </div>
     </nav>
   );

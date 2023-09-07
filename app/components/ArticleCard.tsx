@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+
 export interface PetProps {
   id: number;
   petName: string;
@@ -20,11 +21,12 @@ const ArticleCard = ({ data }: { data: PetProps }) => {
           <Image
             src={imgUrl}
             alt='pet_image'
-            placeholder='empty'
-            loading='lazy'
+            placeholder='blur'
+            blurDataURL={imgUrl}
             key={imgUrl}
             className='rounded-t-md'
             fill
+            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
             style={{
               objectFit: 'cover',
             }}

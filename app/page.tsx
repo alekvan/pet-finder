@@ -1,5 +1,4 @@
 import ArticlesWrapper from './components/ArticlesWrapper';
-import Map from './components/Map';
 
 export default function Home() {
   return (

@@ -24,7 +24,7 @@
   {
     "id": 33,
     "petName": "Major",
-    "petPictures": ["/images/article_card_carousel/article_card_img_01.jpg"],
+    "petPictures": ["/images/article_card_carousel/article_card_img_03.jpg"],
     "petColor": "white",
     "petOwner": "Phil",
     "lgt": "24.9234",
@@ -35,7 +35,7 @@
   {
     "id": 34,
     "petName": "Kevin",
-    "petPictures": ["/images/article_card_carousel/article_card_img_01.jpg"],
+    "petPictures": ["/images/article_card_carousel/article_card_img_04.jpg"],
     "petColor": "black",
     "petOwner": "Kyle",
     "lgt": "20.9234",
@@ -46,7 +46,7 @@
   {
     "id": 35,
     "petName": "Kevin",
-    "petPictures": ["/images/article_card_carousel/article_card_img_01.jpg"],
+    "petPictures": ["/images/article_card_carousel/article_card_img_05.jpg"],
     "petColor": "black",
     "petOwner": "Kyle",
     "lgt": "20.9234",
