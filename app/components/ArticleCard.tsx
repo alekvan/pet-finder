@@ -26,7 +26,7 @@ const ArticleCard = ({ data }: { data: PetProps }) => {
             key={imgUrl}
             className='rounded-t-md'
             fill
-            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+            sizes='33vw'
             style={{
               objectFit: 'cover',
             }}

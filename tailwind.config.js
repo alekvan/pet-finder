@@ -25,6 +25,9 @@ module.exports = {
       width: {
         'pet-cards': '300px',
       },
+      height: {
+        '70vh': '70vh',
+      },
     },
   },
   plugins: [],

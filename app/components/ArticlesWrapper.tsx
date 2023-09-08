@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ArticleCard from './ArticleCard';
 import data from '../../dummyData.json';
 

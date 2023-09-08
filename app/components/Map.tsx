@@ -2,7 +2,6 @@
 
 import { LatLngExpression, LeafletMouseEvent } from 'leaflet';
 import { useState, useMemo, useRef } from 'react';
-import { UseFormRegister } from 'react-hook-form/dist/types';
 import {
   MapContainer,
   TileLayer,
@@ -10,18 +9,13 @@ import {
   Marker,
   Popup,
 } from 'react-leaflet';
-import { Inputs } from './SignInForm';
 
 export interface MapCordsObj {
   lat: number;
   lng: number;
 }
 
-export interface MapProps extends MapCordsObj {
-  register: UseFormRegister<Inputs>;
-}
-
-const Map = ({ lat, lng }: MapCordsObj, register: UseFormRegister<Inputs>) => {
+const Map = ({ lat, lng }: MapCordsObj) => {
   const markerRef = useRef<any>(null);
   const [position, setPosition] = useState<LatLngExpression | null>(null);
   const eventHandlers = useMemo(

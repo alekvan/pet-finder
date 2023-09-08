@@ -1,3 +1,4 @@
+'use client';
 import ArticlesWrapper from './components/ArticlesWrapper';
 
 export default function Home() {

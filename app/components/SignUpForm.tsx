@@ -1,14 +1,12 @@
 'use client';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import Map, { MapCordsObj } from './Map';
 
 export type Inputs = {
   username: string;
   password: string;
-  mapCords: MapCordsObj;
 };
 
-export default function App() {
+export default function SignUp() {
   const {
     register,
     handleSubmit,
@@ -46,7 +44,7 @@ export default function App() {
             Password
           </label>
           <input
-            {...register('password', { required: true, maxLength: 255 })}
+            {...register('password', { required: true })}
             className='border-2 border-solid border-orange-dark focus:outline-none  px-2 rounded-md h-12'
             type='password'
             id='password'
