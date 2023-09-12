@@ -1,7 +1,13 @@
+import Container from '@/app/components/Container';
+import SampleComponent from '@/app/components/SampleComponent';
 import React from 'react';
 
-const Locations = () => {
-  return <div>Locations</div>;
+const page = () => {
+  return (
+    <Container>
+      <SampleComponent />
+    </Container>
+  );
 };
 
-export default Locations;
+export default page;

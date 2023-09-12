@@ -3,16 +3,21 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 
 export type Inputs = {
   username: string;
+  email: string;
   password: string;
+  confirmPassword: string;
 };
 
 export default function SignUp() {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
-  } = useForm<Inputs>();
+    reset,
+    watch,
+  } = useForm<Inputs>({
+    mode: 'onTouched',
+  });
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 
   console.log(watch('username'));
@@ -20,46 +25,104 @@ export default function SignUp() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className='flex flex-col justify-center w-full h-70vh mx-auto bg-gradient-to-br from-blue-light'
+      className='flex flex-col justify-center w-full h-full py-12 lg:h-70vh lg:py-0 mx-auto bg-gradient-to-br from-blue-light'
     >
       <div className='w-80 flex-col self-center h-fit'>
         <div className='flex flex-col h-28'>
-          <label htmlFor='username' className='text-lg font-semibold'>
+          <label htmlFor='username' className='text-lg font-semibold w-fit'>
             Username
           </label>
           <input
-            defaultValue='user123'
-            {...register('username', { required: true })}
-            className='border-2 border-solid border-orange-dark focus:outline-none  px-2 rounded-md h-12'
-            type='text'
+            placeholder='Enter username'
+            {...register('username', {
+              required: 'This field is required',
+              minLength: {
+                value: 3,
+                message: 'Username needs to be at least 3 characters',
+              },
+            })}
+            className='border-2 focus:border-solid focus:border-orange-dark focus:outline-none  px-2 rounded-md h-12'
             id='username'
           />
           {errors.username && (
-            <span className='text-red-700'>This field is required</span>
+            <span className='text-red-700'>{errors.username.message}</span>
+          )}
+        </div>
+        <div className='flex flex-col h-28'>
+          <label htmlFor='email' className='text-lg font-semibold w-fit'>
+            E-mail
+          </label>
+          <input
+            placeholder='Enter email'
+            {...register('email', {
+              required: 'This field is required',
+              pattern: {
+                value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}/,
+                message: 'Incorrect email format',
+              },
+            })}
+            className='border-2 focus:border-solid focus:border-orange-dark focus:outline-none  px-2 rounded-md h-12'
+            type='email'
+            id='email'
+          />
+          {errors.email && (
+            <span className='text-red-700'>{errors.email.message}</span>
           )}
         </div>
 
         <div className='flex flex-col h-28'>
-          <label htmlFor='password' className='text-lg font-semibold mt-4'>
+          <label htmlFor='password' className='text-lg font-semibold w-fit'>
             Password
           </label>
           <input
-            {...register('password', { required: true })}
-            className='border-2 border-solid border-orange-dark focus:outline-none  px-2 rounded-md h-12'
+            placeholder='Enter password'
+            {...register('password', {
+              required: 'This field is required',
+              minLength: {
+                value: 8,
+                message: 'Password must be at least 8 characters',
+              },
+              maxLength: 250,
+            })}
+            className='border-2 focus:border-solid focus:border-orange-dark focus:outline-none  px-2 rounded-md h-12'
             type='password'
             id='password'
           />
           {errors.password && (
-            <span className='text-red-700'>This field is required</span>
+            <span className='text-red-700'>{errors.password.message}</span>
+          )}
+        </div>
+        <div className='flex flex-col h-28'>
+          <label
+            htmlFor='confirmPassword'
+            className='text-lg font-semibold w-fit'
+          >
+            Confirm Password
+          </label>
+          <input
+            placeholder='Confirm password'
+            {...register('confirmPassword', {
+              required: 'This field is required',
+              validate: (value) =>
+                watch('password') === value || 'Passwords do not match',
+            })}
+            className='border-2 focus:border-solid focus:border-orange-dark focus:outline-none  px-2 rounded-md h-12'
+            type='password'
+            id='confirmPassword'
+          />
+          {errors.confirmPassword && (
+            <span className='text-red-700'>
+              {errors.confirmPassword.message}
+            </span>
           )}
         </div>
 
         <div className='w-full flex justify-center'>
           <button
             type='submit'
-            className='cursor-pointer w-1/3 shadow-lg rounded hover:bg-orange-dark font-nunito my-4 h-10 text-lg font-semibold bg-orange-light text-blue-dark'
+            className='cursor-pointer w-1/2 shadow-lg rounded hover:bg-orange-dark font-nunito my-4 h-10 text-lg font-semibold bg-orange-light text-blue-dark'
           >
-            Login
+            Креирај
           </button>
         </div>
       </div>

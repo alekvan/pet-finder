@@ -42,7 +42,7 @@ export default function App() {
         </div>
 
         <div className='flex flex-col h-28'>
-          <label htmlFor='password' className='text-lg font-semibold mt-4'>
+          <label htmlFor='password' className='text-lg font-semibold'>
             Password
           </label>
           <input
@@ -59,9 +59,9 @@ export default function App() {
         <div className='w-full flex justify-center'>
           <button
             type='submit'
-            className='cursor-pointer w-1/3 shadow-lg rounded hover:bg-orange-dark font-nunito my-4 h-10 text-lg font-semibold bg-orange-light text-blue-dark'
+            className='cursor-pointer w-1/2 shadow-lg rounded hover:bg-orange-dark font-nunito my-4 h-10 text-lg font-semibold bg-orange-light text-blue-dark'
           >
-            Login
+            Логирај
           </button>
         </div>
       </div>

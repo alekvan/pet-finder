@@ -1,7 +1,13 @@
+import Container from '@/app/components/Container';
+import SampleComponent from '@/app/components/SampleComponent';
 import React from 'react';
 
 const page = () => {
-  return <div>page</div>;
+  return (
+    <Container>
+      <SampleComponent />
+    </Container>
+  );
 };
 
 export default page;
