@@ -18,7 +18,7 @@ const NavBar = () => {
         </div>
         <div className='flex justify-between float-right md:w-62 lg:w-60 sm:w-60'>
           {windowSize.width && windowSize.width > 639 && (
-            <div className='flex w-48 justify-between'>
+            <div className='flex w-52 justify-between'>
               <Link href='/'>HOME</Link>
               <Link href='/cats'>Cats</Link>
               <Link href='/dogs'>Dogs</Link>
