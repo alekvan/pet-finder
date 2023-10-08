@@ -21,7 +21,7 @@ const NavBar = () => {
             <div className='flex w-52 justify-between'>
               <Link href='/cats'>Cats</Link>
               <Link href='/dogs'>Dogs</Link>
-              <Link href='/other'>Other Pets</Link>
+              <Link href='/other-pets'>Other Pets</Link>
             </div>
           )}
           {windowSize.width && <DropdownMenu />}
