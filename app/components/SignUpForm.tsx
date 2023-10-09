@@ -1,26 +1,22 @@
 'use client';
 import { useForm, SubmitHandler } from 'react-hook-form';
-
-export type Inputs = {
-  username: string;
-  email: string;
-  password: string;
-  confirmPassword: string;
-};
+import { SignUpInputData } from '../dtos';
 
 export default function SignUp() {
+  const inputStyle =
+    'border-2 focus:border-solid focus:border-orange-dark focus:outline-none px-2 rounded-md h-12';
+  const inputWrapperStyle = 'flex flex-col h-28';
+
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
     watch,
-  } = useForm<Inputs>({
+  } = useForm<SignUpInputData>({
     mode: 'onTouched',
   });
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
-
-  console.log(watch('username'));
+  const onSubmit: SubmitHandler<SignUpInputData> = (data) => console.log(data);
 
   return (
     <form
@@ -28,7 +24,7 @@ export default function SignUp() {
       className='flex flex-col justify-center w-full h-full py-12 lg:h-70vh lg:py-0 mx-auto bg-gradient-to-br from-blue-light'
     >
       <div className='w-80 flex-col self-center h-fit'>
-        <div className='flex flex-col h-28'>
+        <div className={inputWrapperStyle}>
           <label htmlFor='username' className='text-lg font-semibold w-fit'>
             Username
           </label>
@@ -41,14 +37,14 @@ export default function SignUp() {
                 message: 'Username needs to be at least 3 characters',
               },
             })}
-            className='border-2 focus:border-solid focus:border-orange-dark focus:outline-none  px-2 rounded-md h-12'
+            className={inputStyle}
             id='username'
           />
           {errors.username && (
             <span className='text-red-700'>{errors.username.message}</span>
           )}
         </div>
-        <div className='flex flex-col h-28'>
+        <div className={inputWrapperStyle}>
           <label htmlFor='email' className='text-lg font-semibold w-fit'>
             E-mail
           </label>
@@ -70,7 +66,7 @@ export default function SignUp() {
           )}
         </div>
 
-        <div className='flex flex-col h-28'>
+        <div className={inputWrapperStyle}>
           <label htmlFor='password' className='text-lg font-semibold w-fit'>
             Password
           </label>
@@ -84,7 +80,7 @@ export default function SignUp() {
               },
               maxLength: 250,
             })}
-            className='border-2 focus:border-solid focus:border-orange-dark focus:outline-none  px-2 rounded-md h-12'
+            className={inputStyle}
             type='password'
             id='password'
           />
@@ -92,7 +88,7 @@ export default function SignUp() {
             <span className='text-red-700'>{errors.password.message}</span>
           )}
         </div>
-        <div className='flex flex-col h-28'>
+        <div className={inputWrapperStyle}>
           <label
             htmlFor='confirmPassword'
             className='text-lg font-semibold w-fit'
@@ -106,7 +102,7 @@ export default function SignUp() {
               validate: (value) =>
                 watch('password') === value || 'Passwords do not match',
             })}
-            className='border-2 focus:border-solid focus:border-orange-dark focus:outline-none  px-2 rounded-md h-12'
+            className={inputStyle}
             type='password'
             id='confirmPassword'
           />

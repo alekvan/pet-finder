@@ -16,7 +16,7 @@ const NavBar = () => {
           <span className='text-lg font-bold'> | </span>
           <Link href='/signup'>Регистрација</Link>
         </div>
-        <div className='flex justify-between float-right md:w-62 lg:w-60 sm:w-60'>
+        <div className='flex justify-between float-right md:w-62 lg:w-64 sm:w-60'>
           {windowSize.width && windowSize.width > 639 && (
             <div className='flex w-52 justify-between'>
               <Link href='/cats'>Cats</Link>

@@ -8,7 +8,7 @@ type ContainerProps = {
 const Container = (props: ContainerProps) => {
   return (
     <div
-      className={`container p-8 mx-auto xl:px-0 ${
+      className={`p-10 mx-auto xl:px-0 bg-gray-800 ${
         props.className ? props.className : ''
       }`}
     >

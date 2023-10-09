@@ -1,21 +1,20 @@
 'use client';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import Map, { MapCordsObj } from './Map';
-
-export type Inputs = {
-  username: string;
-  password: string;
-  mapCords: MapCordsObj;
-};
+import { SignInInputData } from '../dtos';
 
 export default function App() {
+  const inputStyle =
+    'border-2 focus:border-solid focus:border-orange-dark focus:outline-none px-2 rounded-md h-12';
+
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  } = useForm<SignInInputData>({
+    mode: 'onTouched',
+  });
+  const onSubmit: SubmitHandler<SignInInputData> = (data) => console.log(data);
 
   console.log(watch('username'));
 
@@ -32,8 +31,7 @@ export default function App() {
           <input
             defaultValue='user123'
             {...register('username', { required: true })}
-            className='border-2 border-solid border-orange-dark focus:outline-none  px-2 rounded-md h-12'
-            type='text'
+            className={inputStyle}
             id='username'
           />
           {errors.username && (
@@ -47,7 +45,7 @@ export default function App() {
           </label>
           <input
             {...register('password', { required: true, maxLength: 255 })}
-            className='border-2 border-solid border-orange-dark focus:outline-none  px-2 rounded-md h-12'
+            className={inputStyle}
             type='password'
             id='password'
           />
@@ -61,7 +59,7 @@ export default function App() {
             type='submit'
             className='cursor-pointer w-1/2 shadow-lg rounded hover:bg-orange-dark font-nunito my-4 h-10 text-lg font-semibold bg-orange-light text-blue-dark'
           >
-            Логирај
+            Логин
           </button>
         </div>
       </div>

@@ -9,11 +9,7 @@ import {
   Marker,
   Popup,
 } from 'react-leaflet';
-
-export interface MapCordsObj {
-  lat: number;
-  lng: number;
-}
+import { MapCordsObj } from '../dtos';
 
 const Map = ({ lat, lng }: MapCordsObj) => {
   const markerRef = useRef<any>(null);

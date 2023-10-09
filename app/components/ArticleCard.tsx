@@ -1,17 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-
-export interface PetProps {
-  id: number;
-  petName: string;
-  petColor: string;
-  petPictures: string[];
-  petOwner: string;
-  lgt: string;
-  ltd: string;
-  petBreed: string;
-  petDescription: string;
-}
+import { PetProps } from '../dtos';
 
 const ArticleCard = ({ data }: { data: PetProps }) => {
   return (
